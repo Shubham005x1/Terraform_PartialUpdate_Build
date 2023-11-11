@@ -93,7 +93,7 @@ func PartialUpdateEmployee(w http.ResponseWriter, r *http.Request) {
 
 	if partialEmpPassword, ok := partialEmp["Password"].(string); ok {
 		if partialEmpPassword == "" {
-			http.Error(w, "Password cannot be empty", http.StatusBadRequest)
+			http.Error(w, "Password cannot be empty!!", http.StatusBadRequest)
 			return
 		}
 	}
