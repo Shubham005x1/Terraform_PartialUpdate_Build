@@ -54,7 +54,7 @@ func PartialUpdateEmployee(w http.ResponseWriter, r *http.Request) {
 	err := json.NewDecoder(r.Body).Decode(&partialEmp)
 
 	if err != nil {
-		http.Error(w, "Invalid request body", http.StatusBadRequest)
+		http.Error(w, "Invalid request body!!", http.StatusBadRequest)
 		logger.Log(logging.Entry{
 			Payload:  "Invalid request body",
 			Severity: logging.Error,
